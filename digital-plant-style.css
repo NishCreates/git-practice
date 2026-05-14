@@ -1,0 +1,202 @@
+
+/* Styling the Title */
+.title{
+    text-align: center;
+    color: darkgreen;
+    margin: 0;
+}
+
+/* Styling Animation quote */
+.plant-quote{
+    width: 100%;
+    overflow: hidden; /* To hide the start point*/
+    /* background: rgba(114, 163, 100, 0.1); */
+    padding: 0px 10;
+}
+
+.scrolling-quote {
+    white-space: nowrap; /*so that quote stay in one line*/
+    display: inline-block;
+    font-style: italic;
+    font-size: 20px;
+    color: #2d4a22;
+    animation: travel 22s linear infinite; /*Speed of the animation*/
+}
+
+/* Animation + use of Unit to set direction of animation */
+@keyframes travel {
+   0% { 
+        transform: translateX(100vw); /* Starts at the very right edge of the screen */
+    }   
+    100% { 
+        transform: translateX(-100%); /* Ends when the entire text has disappeared to the left */
+    }
+}
+
+.nav-links{
+    display: flex;
+    
+    justify-content: space-between;
+}
+/* Media queries */
+@media screen and (max-width: 768px){
+    .navbar, .navright, .photo-grid {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Media queries */
+@media screen and (max-width: 600px){
+    .navbar, .footer{
+        flex-direction: column;
+        align-items: center;
+        font-size: 12px;
+        gap: 12px;
+    }
+}
+
+.btn{
+    background-color: rgb(2, 85, 2);
+    color: aliceblue;
+    text-align: center;
+    font-size: 16px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    background-color: lightgreen;
+    padding: 15px 30px;
+    margin-bottom: 30px;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    color: #eff3ef;
+    font-weight: bold;
+    margin-right: 20px;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Styling individual buttons of navbar*/
+.plan-btn {
+    background-color: rgb(6, 109, 57); 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+} 
+
+.plan-btn:hover {
+    background-color: #2d4a22; /*Darkens on hover*/
+    color: lightgreen;
+    transform: scale(1.05);    
+    box-shadow: 0px 4px 10px ;
+}
+
+/* Styling right side of Navbar */
+.navright{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-box{
+    
+    display:flex;
+    align-items: center;
+    gap: 1px;
+    margin-left: 20px;
+    /* position: relative; */
+}
+
+.search-box input{
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid ;
+}
+
+
+.social-icons i {
+  font-size: 20px;
+  margin-left: 15px;
+  transition: color 0.3s;
+}
+.social-icons i:hover {
+  color: #2623ca; 
+  cursor: pointer;
+}
+
+
+/* Styling Parent Photo Grid */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 20px;
+    max-width: 900px;       
+    margin: 20px auto;      
+}
+
+/* Styling parent grid image as a CONTAINER */
+.photo-grid img {
+    width: 100%;            
+    max-width: 100%;        
+    height: 350px;          
+    object-fit: cover;      /*Crops them so they don't look stretched */
+    /* display: block; */
+    border-radius: 20px;
+}
+/* Styling child grid */
+.grid-item{
+    width: 100%;
+    height: 350px;
+    border-radius: 8px;
+    transition: transform 0.3 ease;
+}
+
+.grid-item img:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden; /* Clips the info box to the image corners */
+    border-radius: 15px;
+}
+
+/* Plant image hover information Styling */
+
+.plant-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(45, 74, 34, 0.9); 
+    color: white;
+    padding: 20px;
+    transform: translateY(100%); /* Hides it below the card */
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-item:hover .plant-info {
+    transform: translateY(0); /* Slides it up on hover */
+}
+
+
+/* Styling footer */
+.footer{
+    /* padding: 15px; */
+    text-align: center;
+    background-color: #029243e0;
+    color: aliceblue;
+    clear: both;
+    display: block;
+}

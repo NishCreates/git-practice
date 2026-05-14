@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="plant-info-form.css">
+</head>
+<body>
+    <section id="growth-plan">
+    <h2>The Garden Growth Plan</h2>
+    <!-- <form action="nishaa@missionreadyhq.com" methods="post" autocomplete="on"> -->
+        <!-- After submission the form redirected to Thank you file -->
+    <form action="Thankyou.html">
+    <fieldset>
+            <legend><h3>Plant Information</h3></legend>
+            <!--first input field-->
+            <label>Plant Parent Name:</label>
+            <input type="text" name="Name" required placeholder="First and Last Name"/> <br/> <br/>
+
+             <!--second input field-->
+            <label>Seedling Updates Email:</label>
+            <input type="email" name="Email" required placeholder="Enter your email id"/><br/>
+
+            <!--third input field: CHECKBOX -->
+            <p>Which plants do you currently own?</p>
+                <input type="checkbox" id="pothos" name="plants" value="pothos">
+                <label for="pothos">Pothos</label>
+
+                <input type="checkbox" id="jade" name="plants" value="jade">
+                <label for="jade">Jade</label>
+
+                <input type="checkbox" id="snake" name="plants" value="snake">
+                <label for="snake">Snake Plant</label>
+
+                <input type="checkbox" id="other" name="Other" value="other">
+                <label for="snake">Other</label>
+
+            <!--forth input field: Radio Buttons-->
+            <p>Where is your plant located?</p>
+                <!-- Option 1: Indoors -->
+                <input type="radio" id="indoors" name="location" value="indoors">
+                <label for="indoors">Indoors</label>
+
+                <!-- Option 2: Outdoors -->
+                <input type="radio" id="outdoors" name="location" value="outdoors">
+                <label for="outdoors">Outdoors</label>
+
+                <!-- Option 2: Both -->
+                <input type="radio" id="Both" name="location" value="Both">
+                <label for="Both">Both</label>
+
+            <!--fifth input field: number -->
+                <p>How many plants total?</p>
+                <input type="number" id="plant-number"/> </br>
+
+            <!--sixth input field: number -->
+            <p>Story: "Plant behavior notes"</p>
+            <textarea name="message" placeholder="A short story on your concerns"></textarea> </br> </br>
+
+            <!--Submit Button-->
+            <nav navlink>
+            <input type="submit" value="Submit"/>
+            </nav>
+    </fieldset>
+    </section>
+</form>
+</body>
+</html>
